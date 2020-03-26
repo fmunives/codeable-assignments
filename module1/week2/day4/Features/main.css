@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.color-aquamarine {
+  color: #0ad9c6;
+}
+
+.color-gray {
+  color: #7a7a7a;
+}
+
+.flex {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 236px;
+}
+
+.card .title {
+  font-size: 28px;
+}
+
+.card .subtitle {
+  font-size: 22px;
+}
+
+.card .description {
+  font-size: 16px;
+}
