@@ -79,6 +79,18 @@ body {
   position: relative;
 }
 
+.text-bold {
+  font-weight: 600;
+}
+
+.color-aquamarine {
+  color: #0ad9c6;
+}
+
+.color-gray {
+  color: #7a7a7a;
+}
+
 /* specific styles */
 
 .relative button {
@@ -120,4 +132,26 @@ body {
 .nav {
   font-size: 12px;
   font-weight: bold;
+}
+
+.container-cards {
+  height: 100vh;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 236px;
+}
+
+.card .title {
+  font-size: 28px;
+}
+
+.card .subtitle {
+  font-size: 22px;
+}
+
+.card .description {
+  font-size: 16px;
 }
