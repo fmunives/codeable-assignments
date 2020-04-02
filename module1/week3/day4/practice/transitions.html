@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: lightblue;
+        text-align: center;
+      }
+
+      .wrapper {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+      }
+
+      img {
+        /* width: 200px; */
+        /* transform: translateX(200px); */
+        /* transform: rotateX(45deg); */
+        /* transform: scale(0.5, 1); */
+        transform: rotate(-45deg) translateY(-100px) scale(0.5);
+      }
+
+      .circle {
+        background-color: lightcoral;
+        width: 100px;
+        border-radius: 50px;
+        margin: 60px auto;
+        padding: 50px 0;
+        color: white;
+        cursor: pointer;
+        line-height: 0;
+        transition: background-color 1s, transform 0.5s 0.1s ease-in;
+      }
+
+      .circle:hover {
+        background-color: tomato;
+        transform: rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <img src="./cloud.png" alt="" />
+      <div class="circle">hover me</div>
+    </div>
+  </body>
+</html>

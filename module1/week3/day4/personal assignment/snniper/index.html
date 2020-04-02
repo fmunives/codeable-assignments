@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snniper</title>
+    <style>
+      body {
+        padding: 50px;
+      }
+      .snniper {
+        width: 50px;
+        animation: snniper 1s linear infinite both;
+        /* animation: name duration timing-function delay iteration-count direction
+          fill-mode; */
+      }
+
+      @keyframes snniper {
+        from {
+          transform: rotate(0);
+          opacity: 0;
+        }
+        to {
+          transform: rotate(360deg);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img class="snniper" src="snniper.svg" alt="" />
+  </body>
+</html>
