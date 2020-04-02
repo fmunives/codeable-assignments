@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snniper</title>
+    <style>
+      /* animation: name duration timing-function delay iteration-count direction
+          fill-mode; */
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        padding: 50px;
+        display: flex;
+      }
+      ul.father {
+        border-bottom: 1px solid #ebebeb;
+        margin-left: 50px;
+      }
+
+      ul.father > li {
+        display: inline-block;
+      }
+
+      .menu {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: #595959;
+        display: inline-block;
+        padding: 10px;
+      }
+
+      .menu a:hover {
+        color: rgb(20, 123, 192);
+        border-bottom: 1px solid rgb(20, 123, 192);
+      }
+
+      .show {
+        position: relative;
+        /* margin-bottom: 5px; */
+      }
+
+      .dropdown {
+        position: absolute;
+        padding: 15px 12px;
+        min-width: 140px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        /* margin-top: 5px; */
+        display: none;
+      }
+
+      .show:hover .dropdown {
+        display: block;
+        transition: all 1s ease-in;
+        animation: show 0.5s;
+        transform: translateY(5px);
+      }
+
+      .show:hover::after {
+        content: "";
+        position: absolute;
+        display: block;
+        background: transparent;
+        width: 100%;
+        height: 5px;
+      }
+
+      @keyframes show {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(5px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu father">
+      <li><a href="">Menu</a></li>
+      <li class="show">
+        <a class="" href="">Menu</a>
+        <ul class="menu dropdown">
+          <li><a href="">Option 1</a></li>
+          <li><a href="">Option 2</a></li>
+          <li><a href="">Option 3</a></li>
+          <li><a href="">Option 4 </a></li>
+        </ul>
+      </li>
+      <li><a href="">Menu</a></li>
+    </ul>
+  </body>
+</html>

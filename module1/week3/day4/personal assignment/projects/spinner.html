@@ -5,29 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snniper</title>
     <style>
+      /* animation: name duration timing-function delay iteration-count direction
+          fill-mode; */
+
+      * {
+        box-sizing: border-box;
+      }
       body {
         padding: 50px;
-      }
-      .snniper {
-        width: 50px;
-        animation: snniper 1s linear infinite both;
-        /* animation: name duration timing-function delay iteration-count direction
-          fill-mode; */
+        display: flex;
       }
 
-      @keyframes snniper {
-        from {
-          transform: rotate(0);
-          opacity: 0;
-        }
+      .spinner {
+        width: 50px;
+        animation: spinner 1.5s linear infinite;
+      }
+      @keyframes spinner {
         to {
           transform: rotate(360deg);
-          opacity: 1;
+          /* opacity: 1; */
         }
       }
     </style>
   </head>
   <body>
-    <img class="snniper" src="snniper.svg" alt="" />
+    <img class="spinner" src="snniper.svg" alt="" />
   </body>
 </html>
