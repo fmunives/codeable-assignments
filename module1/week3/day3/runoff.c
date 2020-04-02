@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <math.h>
 
 // Max voters and candidates
 #define MAX_VOTERS 100
@@ -141,6 +142,15 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    int most_votes = round(voter_count / 2) + 1;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes >= most_votes)
+        {
+            printf("winner: %s\n", candidates[i].name);
+            return true;
+        }
+    }
     return false;
 }
 
@@ -148,13 +158,33 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
-    return 0;
+    int min_votes = candidates[0].votes;
+
+    for (int i = 1; i < candidate_count; i++)
+    {
+        min_votes = min_votes < candidates[i].votes ? min_votes : candidates[i].votes;
+    }
+    return min_votes;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
     // TODO
+    int count = 0;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (min == candidates[i].votes)
+        {
+            count++;
+        }
+    }
+
+    if (count > 1)
+    {
+        return true;
+    }
+
     return false;
 }
 
@@ -162,5 +192,11 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     // TODO
-    return;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (min == candidates[i].votes)
+        {
+            candidates[i].eliminated = true;
+        }
+    }
 }
